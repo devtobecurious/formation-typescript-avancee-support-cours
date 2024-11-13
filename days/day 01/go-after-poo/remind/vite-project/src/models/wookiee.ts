@@ -6,7 +6,12 @@ export class Wookiee extends Character {
     constructor(surname: string, lifePoint: number) 
     constructor(lifePoint: number)
     constructor(first: string | number, second = 0) {
-        super(typeof(first) === 'string' ? first : '')
+        super(typeof(first) === 'string' ? first : second.toString())
+        this.lifePoint = second
+    }
+
+    get lifePoints() {
+        return this.lifePoint
     }
 }
 

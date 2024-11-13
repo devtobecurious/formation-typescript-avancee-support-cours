@@ -1,3 +1,3 @@
-import { Wookiee } from "./wookiee";
+// import { Wookiee } from "./wookiee";
 
-const wookiee = new Wookiee('', 2)
+// const wookiee = new Wookiee('', 2)
