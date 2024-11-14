@@ -1,4 +1,5 @@
 import { log } from "./logger";
+import { logged } from "./logger-es";
 
 export function first() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
