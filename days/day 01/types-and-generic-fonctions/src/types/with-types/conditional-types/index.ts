@@ -52,8 +52,30 @@ function sendEmail<T extends { email: string }>(item: WithEmail<T>) {
     console.log(item.email)
 }
 
+// Extract type from array
 type ElementType<T> = T extends (infer U)[] ? U : never
 type MyArray = string[]
 
 type MyArrayElement = ElementType<MyArray>
 const item: MyArrayElement = 'coucou'
+
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type ReturnType<T> = T extends (...args: any[]) => infer T ? T : never
+
+class Hobbit {
+    constructor(public name: string, public nbLunchs: number) { }
+}
+
+// Extract return type
+type ResultHobbit = ReturnType<Hobbit> // never
+type FunctionResult = ReturnType<() => string> // string
+
+// Extract string from other
+type ExtractStringType<T> = T extends `${infer U} !` ? U : never;
+type ExtractStringTypeResult = ExtractStringType<'coucou !'> // coucou
+
+
+// Extract types union from one object type
+type ExtractFromSingleton<T> = T extends { [K in keyof T]: infer U } ? U : never
+type UnionTypeOfHobbit = ExtractFromSingleton<Hobbit>
