@@ -1,4 +1,8 @@
 describe('main', () => {
+    beforeAll(() => {
+        jest.setTimeout(0)
+    })
+
     beforeEach(() => {
         document.body.innerHTML = '<div id="coucou"></div>'
     })
@@ -13,6 +17,24 @@ describe('main', () => {
         console.info(div)
         expect(div).toBeTruthy();
     });
+
+    it('should call and assert Promise',  async () => {
+        const p = Promise.resolve(false)
+
+        const result = await p
+        expect(result).toBe(true)
+    })
+
+    it('should call and assert Promise bis',  async () => {
+        const p = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(false)
+            }, 1500);
+        })
+
+        const result = await p
+        expect(result).toBe(true)
+    })
 });
 
 test('test should display content', () => {
