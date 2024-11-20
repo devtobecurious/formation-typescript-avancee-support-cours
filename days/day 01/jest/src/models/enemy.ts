@@ -6,6 +6,10 @@ export class Enemy {
         console.log('Hi my name is ', this.name)
     }
 
+    receive(point: number): void {
+        this.name = point.toString()
+    }
+
     get myName() {
         return this.name;
     }

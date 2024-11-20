@@ -1,5 +1,12 @@
+import { Enemy } from "./enemy"
+
 export class MainCharacter {
     private _currentPosition = {x: 0, y: 0}
+
+    kill(enemy: Enemy): void {
+        console.info('kill')
+        enemy.receive(100)
+    }
 
     move(direction: string): void {
         if(direction == '') return
