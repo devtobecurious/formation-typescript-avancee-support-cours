@@ -1,6 +1,3 @@
-import { Example } from './decorators/examples'
-import { GameConfig } from './models/game-config'
-import { Weapon } from './models/weapon'
 import './style.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -9,15 +6,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </div>
 `
 
-console.info(GameConfig.nbEnemiesInGame)
 
-const weapon = new Weapon()
-weapon.reload = true
-
-const weapon2 = new Weapon()
-weapon.reload = false
-
-Weapon.compare(weapon, weapon2)
-
-const example = new Example()
-example.method()
