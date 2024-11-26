@@ -1,4 +1,4 @@
-class CharacterCustomElement extends HTMLElement {
+export class CharacterCustomElement extends HTMLElement {
     static observedAttributes = ["color", "size"];
 
     constructor() {
