@@ -1,5 +1,5 @@
 {
-  "name": "@devtobecurious/test-lib",
+  "name": "using-lib",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@types/node": "^22.9.3",
     "typescript": "~5.6.2",
     "vite": "^5.4.10"
   }
