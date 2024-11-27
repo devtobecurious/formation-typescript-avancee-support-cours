@@ -1,8 +1,7 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
-import CharacterCustomElement from '@dtbc/lor-character'
+import { setupCounter } from 'lor-character'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

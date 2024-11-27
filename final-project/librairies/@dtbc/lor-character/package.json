@@ -1,8 +1,13 @@
 {
-  "name": "@dtbc/lor-character",
+  "name": "lor-character",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "dist/lib-character.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
