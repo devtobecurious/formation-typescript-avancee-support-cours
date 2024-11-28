@@ -1,8 +1,9 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
-  // plugins: [dts()],
+  plugins: [dts()],
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
@@ -10,7 +11,8 @@ export default defineConfig({
       name: 'Player',
       // the proper extensions will be added
       fileName: 'player-lib',
-      formats: ['cjs', 'es', 'umd']
+      //formats: ['cjs', 'es', 'umd']
+      formats: ['es']
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
