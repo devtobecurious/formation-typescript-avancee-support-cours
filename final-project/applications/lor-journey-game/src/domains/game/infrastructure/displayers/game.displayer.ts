@@ -1,5 +1,6 @@
+import { Displayer } from "../../application/displayers/displayer"
 
-export class GameDisplayer {
+export class GameDisplayer implements Displayer{
     private container: HTMLDivElement | undefined
 
     constructor() {

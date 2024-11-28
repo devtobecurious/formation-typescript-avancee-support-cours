@@ -5,11 +5,12 @@ import { MainCharacter } from "./main-character"
 export class Game {
     private _mainCharacter: MainCharacter | undefined
 
-    constructor(private readonly displayer: GameDisplayer) {
+    constructor(private readonly displayer: GameDisplayer,
+                private readonly mainCharacterDisplayer: MainCharacterDisplayer) {
     }
 
     start(): void {
-        this._mainCharacter = new MainCharacter(new MainCharacterDisplayer())
+        this._mainCharacter = new MainCharacter(this.mainCharacterDisplayer)
         this.displayer.init()
         this._mainCharacter.init()
     }

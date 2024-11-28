@@ -1,4 +1,6 @@
-export class MainCharacterDisplayer {
+import { Displayer } from "../../application/displayers/displayer"
+
+export class MainCharacterDisplayer implements Displayer {
     private gameContainer: HTMLDivElement | undefined
     private container: HTMLDivElement | undefined
 
