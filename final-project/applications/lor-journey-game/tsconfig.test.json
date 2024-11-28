@@ -9,9 +9,12 @@
     /* Bundler mode */
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
+
+    "experimentalDecorators": true,
 
     /* Linting */
     "strict": true,
