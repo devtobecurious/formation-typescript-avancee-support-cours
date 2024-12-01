@@ -1,0 +1,1 @@
+export type BetterConstructor<T = {}> = new (...args: any[]) => T;
