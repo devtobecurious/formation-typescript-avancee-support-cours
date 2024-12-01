@@ -14,7 +14,7 @@ export function Movable<TBase extends Constructor>(Base: TBase) {
     }
 }
 
-export const MovableEnemy = Movable(Enemy);
+export const movableEnemy = Movable(Enemy);
 
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type, @typescript-eslint/no-explicit-any
@@ -35,4 +35,3 @@ function EnemyMovable<TBase extends EnemyConstructor>(Base: TBase) {
     }
 }
 
-export const MovableEnemy2 = EnemyMovable(Enemy);
