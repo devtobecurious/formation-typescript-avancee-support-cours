@@ -1,3 +1,5 @@
+import { DirectionCallback } from "../../../../core/custom-types/methods";
+
 export interface InputPort {
-    listen(): void;
+    listen(callback: DirectionCallback): void;
 }

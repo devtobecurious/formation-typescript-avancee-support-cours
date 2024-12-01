@@ -11,13 +11,6 @@ export function Movable<T extends MainCharacterConstructor>(Base: T) {
 
         constructor(...args: any[]) {
             super(...args)
-
-            document.addEventListener('move', (event) => {
-                console.info('Position => ', this.position)
-                console.info('move', (event as CustomEvent).detail)
-                this.move((event as CustomEvent).detail)
-                console.info('Position 2 => ', this.position)
-            })
         }
 
         move(direction: Direction) {
